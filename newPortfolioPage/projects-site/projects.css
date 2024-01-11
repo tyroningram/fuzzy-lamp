@@ -1,0 +1,87 @@
+:root {
+  --fw-light: 300;
+  --fw-reg: 400;
+  --fw-med: 500;
+  --fw-bold: 700;
+
+  --text-dark: #676767;
+  --text-light: #c0c0c0;
+
+  --main-dark: #000;
+  --main-light: #fff;
+
+  --fs-body: 1rem;
+  --fs-prim-head: 2.5rem;
+  --fs-sec-head: 1.75rem;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 20px 10% 60px;
+}
+
+.projects {
+  padding: 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.project-title {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.project-description {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.tech-stack {
+  font-size: 22px;
+}
+
+.show-project {
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 2px solid var(--text-dark);
+  border-radius: 0.5rem;
+}
+
+.show-project:hover {
+  cursor: pointer;
+  color: var(--main-dark);
+  border: 2px solid var(--main-dark);
+  border-radius: 0.5rem;
+}

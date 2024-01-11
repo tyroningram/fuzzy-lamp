@@ -1,0 +1,72 @@
+:root {
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --text-dark: #343434;
+  --text-light: #dbe9ee;
+
+  --main-dark: #000;
+  --main-light: #fff;
+  --main-light-acc: #ff8360;
+  --main-dark-acc: #92dce5;
+
+  --fs-body: 1rem;
+  --fs-prim-head: 2.5rem;
+  --fs-sec-head: 1.75rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Martian Mono", monospace;
+}
+
+body {
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+}
+
+.container {
+  width: 350px;
+  padding: 22px;
+  min-height: 460px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1fr 25px;
+  gap: 1rem;
+}
+
+.quote {
+  min-height: 10%;
+}
+
+.author-year {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#change-quote {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#change-quote:hover {
+  background-color: var(--main-light-acc);
+  color: var(--main-light);
+}

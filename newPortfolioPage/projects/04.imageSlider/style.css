@@ -1,0 +1,117 @@
+:root {
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --text-dark: #343434;
+  --text-light: #dbe9ee;
+
+  --main-dark: #000;
+  --main-light: #fff;
+  --main-light-acc: #ff8360;
+  --main-dark-acc: #92dce5;
+
+  --fs-body: 1rem;
+  --fs-prim-head: 2.5rem;
+  --fs-sec-head: 1.75rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Martian Mono", monospace;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 35px;
+  gap: 1.5rem;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+
+.container i {
+  font-size: 50px;
+  color: #ff8360;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container i:first-child {
+  left: -22px;
+}
+
+.container i:last-child {
+  right: -22px;
+}
+
+.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.card {
+  height: 340px;
+  background: #fff;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.card .img img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel {
+    grid-auto-columns: 100%;
+  }
+}
